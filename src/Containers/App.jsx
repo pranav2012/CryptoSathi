@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import Particles from 'react-particles-js';
 import Out from './Out';
+import Social from '../Components/social';
 import Nomatch from '../Components/404';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Dashboard from '../Components/MainApp/Dashboard';
@@ -85,6 +86,7 @@ class App extends Component {
               <Nomatch />
             </Route>
           </Switch>
+          <Social/>
         </div>
       </Router>
     );

@@ -4,6 +4,7 @@ import Signup from './SignUp';
 import {Soaths, Oaths} from './Oaths';
 import '../../styles/login.scss';
 import Nav1 from './Nav1';
+import '../../styles/social.scss';
 
 class Loginform extends Component {
     constructor(props) {
@@ -101,7 +102,6 @@ class Loginform extends Component {
                         <h1>New to <span>CryptoSathi</span> Signup and join us!</h1>
                         <button onClick={() => { this.loginslider(); this.signupfunc();}}>Join Us!</button>
                     </div>
-
                 </div>
 
             </>
