@@ -1,0 +1,18 @@
+body{
+    /*background:linear-gradient(89deg,#FF5DEF 0%,#04C8DE 100%);*/
+    background: linear-gradient(89deg, #217eda 0%, #92c4ff 100%);
+    height: 100%;
+    width: 100%;
+}
+.particles{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.hide{
+    display: none;
+}

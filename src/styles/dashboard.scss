@@ -1,0 +1,19 @@
+.dashboard {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+       font-size: 1.6rem;
+       font-family: sans-serif;
+       letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width:488px){
+    .dashboard{
+        p{
+            font-size: 1rem;
+        }
+    }
+}
