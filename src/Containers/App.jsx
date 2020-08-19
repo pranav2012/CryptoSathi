@@ -78,7 +78,7 @@ class App extends Component {
             </Route>
             <Route exact path='/dashboard/:id'>
               {this.state.signclick === 'home' ? <Redirect to = {'/dashboard/'+ this.state.user.id} /> : <Redirect to='/' />}
-              <Dashboard logout={this.logout}/>
+              <Dashboard logout={this.logout} user={this.state.user}/>
             </Route>
             <Route>
               <Nomatch />
