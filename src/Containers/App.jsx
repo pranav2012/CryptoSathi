@@ -36,7 +36,8 @@ class App extends Component {
   loaduser = (user) => {
     this.setState({
       user: {
-        name: (user.username.split(' ').length <= 1) ? user.username : user.username.split(' ').slice(0, -user.username.split(' ').length + 1).join(' ')
+        name: (user.username.split(' ').length <= 1) ? user.username : user.username.split(' ').slice(0, -user.username.split(' ').length + 1).join(' '),
+        id: user.id
       }
     }, () => {
       localStorage.setItem('username', (user.username.split(' ').length <= 1) ? user.username : user.username.split(' ').slice(0, -user.username.split(' ').length + 1).join(' '));
