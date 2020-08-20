@@ -1,4 +1,7 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 .social{
+    position: relative;
     width: 100%;
     background: #043361;
     height: 15vh;
@@ -11,6 +14,9 @@
        font-size: 1.2rem;
        font-family: 'ubuntu';
        letter-spacing: 2px;
+    }
+    i{
+      border-width: 0;
     }
 }
 
@@ -104,6 +110,7 @@
   }
   @media screen and (max-width:786px){
     .social{
+        margin-top: 54%;
         height: 12vh;
         h3{
             font-size: 1rem;
@@ -121,7 +128,8 @@
   }
   @media screen and (max-width:488px){
       .social{
-          height: 16.2vh;
+          height: 13vh;
+          margin-top: 52%;
           h3{
               font-size: 1rem;
           }

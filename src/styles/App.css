@@ -5,7 +5,9 @@
     justify-content: space-between;
     list-style: none;
 }
-
+.canvas-p{
+    height: 100%;
+}
 .App{
     height: 100%;
     overflow: hidden;
@@ -189,8 +191,10 @@ height: 36px;
 
 }
 
-@media screen and (max-width:844px){
-    
+@media screen and (max-width:841px){
+    .canvas-p{
+        height: 100%;
+    }
     .inf{
         font-weight: 600;
         font-size: 16px;

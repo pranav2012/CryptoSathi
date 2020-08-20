@@ -72,7 +72,7 @@ class App extends Component {
     return (
       <Router>
         <div className='App'>
-          <Particles params={particles_options} className='particles' />
+          <Particles params={particles_options} className='particles' canvasClassName='canvas-p'/>
           <Switch>
             <Route exact path='/'>
               {this.state.signclick === 'loggedout' ? <Redirect to='/' /> : <Redirect to={'/dashboard/' + this.state.user.id} />}
