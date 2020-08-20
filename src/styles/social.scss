@@ -125,6 +125,12 @@
         height: 2rem;
       }
   }
+  @media screen and (max-width:844px){
+    .social{
+      margin-top: 12.5%
+    }
+  } 
+
   @media screen and (max-width:488px){
       .social{
           height: 13vh;
