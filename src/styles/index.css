@@ -15,6 +15,3 @@ body{
 .hide{
     display: none;
 }
-.particles-js-canvas-el {
-  height: 1vmax !important;
-}

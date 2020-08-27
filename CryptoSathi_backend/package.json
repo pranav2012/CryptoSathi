@@ -1,0 +1,24 @@
+{
+  "name": "cryptosathi_backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pranav",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.21.2",
+    "nodemailer": "^6.4.10",
+    "pg": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
