@@ -22,12 +22,11 @@ const signuphandler = (req, res, db ,bcrypt) => {
             hash: hash
         })
         .then(result => {
-            db.select('id', 'email', 'name','enteries').from('users').where('email', '=', email)
+            db.select('id', 'email', 'name').from('users').where('email', '=', email)
             .then(user=>{
                 res.json({
                     status: 'sucess',
                     username: user[0].name,
-                    enteries: user[0].enteries,
                     id: user[0].id,
                 });
                 let mailDetails = { 
