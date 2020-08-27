@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import Dashboard from '../Components/MainApp/Dashboard';
 import 'tachyons';
 
-const backend_url = 'https://cryptosathi.herokuapp.com/';
+const backend_url = 'https://cryptosathi.herokuapp.com';
 
 const particles_options = {
   particles: {
