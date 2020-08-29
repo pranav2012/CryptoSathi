@@ -4,13 +4,13 @@ const sendmail = (email,name) => {
     let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.sender_email,
-            pass: process.env.sender_pass
+            user: process.env.SENDER_EMAIL,
+            pass: process.env.SENDER_PASS
         }
     });
-
+end
     let mailDetails = {
-        from: 'from pranav@Cryptosathi.com' + '<' + process.env.sender_email + '>',
+        from: 'from pranav@Cryptosathi.com' + '<' + process.env.SENDER_EMAIL + '>',
         to: email,
         subject: 'Welcome, to CryptoSathi',
         text: `Hey ${name}, Thanks for registering!`
