@@ -19,10 +19,10 @@ const googlebtn = (responseGoogle,btntext) =>{
     );
 }
 
-const Oaths = ({googleauth}) => {
+const Oaths = ({googleauthentication}) => {
     const responseGoogle = (response,googleauth) => {
         const {name,email} = response.profileObj;
-        googleauth(name,email);
+        googleauthentication(name,email);
     }
     return (
         <div className='oth'>
@@ -31,10 +31,10 @@ const Oaths = ({googleauth}) => {
     );
 }
 
-const Soaths = ({googleauth}) => {
+const Soaths = ({googleauthentication}) => {
     const responseGoogle = (response,googleauth) => {
         const {name,email} = response.profileObj;
-        googleauth(name,email);
+        googleauthentication(name,email);
     }
     return (
         <div className='oth'>

@@ -24,7 +24,7 @@ class Loginform extends Component {
         this.setState(prevState => ({ issignup: !prevState.issignup }));
     }
 
-    googleauth = (name,email) => {
+    googleauthentication = (name,email) => {
         let username = email.replace(/@[^@]+$/, '');
         fetch(this.props.backend_url + '/gauth', {
             method: 'post',
@@ -73,7 +73,7 @@ class Loginform extends Component {
                                 <h3 className={`${this.state.issignup ? 'sh' : 'lh'}`}>OR</h3>
                             </div>
                             <div className={`show-hide ${this.state.issignup ? 'srightside' : 'rightside'}`}>
-                                {this.state.issignup ? <Soaths googleregister={this.googleauth}/> : <Oaths googlesignup={this.googleauth}/>}
+                                {this.state.issignup ? <Soaths googleauthentication={this.googleauthentication}/> : <Oaths googleauthentication={this.googleauthentication}/>}
                             </div>
                         </div>
                     </div>
