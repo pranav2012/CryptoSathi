@@ -7,6 +7,7 @@ const login = require('./authantication/login');
 const signup = require('./authantication/signup');
 const google = require('./authantication/google');
 const bcrypt = require('bcrypt-nodejs');
+const send_mail = require('./mail/send_mail');
 
 const app = express();
 
@@ -14,7 +15,9 @@ app.use(bodyparser.json());
 
 app.use(cors());
 
-app.get('/', (req,res)=>{res.send("hello cryptosathi's")});
+app.get('/', (req,res)=>{
+    res.send("hello cryptosathi's");
+});
 
 app.post('/login', (req,res) => {login.loginhandler(req,res,db,bcrypt)})
 

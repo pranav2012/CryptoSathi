@@ -1,13 +1,4 @@
-const nodemailer = require('nodemailer');
-
-
-let mailTransporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'himeshkumar148@gmail.com',
-        pass: '2001pranav'
-    }
-});
+const send_mail = require('../mail/send_mail');
 
 const googleregister = (req, res, db, bcrypt) => {
     const { name, email, username } = req.body;
@@ -23,24 +14,11 @@ const googleregister = (req, res, db, bcrypt) => {
         }).then(result => {
             db.select('id', 'email', 'name').from('users').where('email', '=', email)
                 .then(user => {
+                    send_mail.sendmail(user[0].email,user[0].name);
                     res.json({
                         status: 'sucess',
                         username: user[0].name,
                         id: user[0].id,
-                    });
-                    let mailDetails = {
-                        from: 'Pranav from @gmail.com <himeshkumar48@gmail.com>',
-                        to: user[0].email,
-                        subject: 'Welcome, to CryptoSathi',
-                        text: `Hey ${user[0].name}, Thanks for registering!`
-                    };
-
-                    mailTransporter.sendMail(mailDetails, function (err, data) {
-                        if (err) {
-                            console.log('Error Occurs');
-                        } else {
-                            console.log('Email sent successfully');
-                        }
                     });
                 }).catch(err => res.status(400).json('no such user'));
         })
