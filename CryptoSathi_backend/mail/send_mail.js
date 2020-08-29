@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 
 const sendmail = (email,name) => {
+    let error = '';
     let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -16,11 +17,14 @@ const sendmail = (email,name) => {
     };
     mailTransporter.sendMail(mailDetails, function (err, data) {
         if (err) {
+            error='error';
             console.log('Error Occurs');
         } else {
+            error='sent'
             console.log('Email sent successfully');
         }
     });
+    return error;
 }
 
 module.exports = {
