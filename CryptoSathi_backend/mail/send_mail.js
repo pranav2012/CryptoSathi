@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
+require('dotenv').config()
 
 const sendmail = (email,name) => {
-    let error = '';
     let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -9,6 +9,7 @@ const sendmail = (email,name) => {
             pass: process.env.SENDER_PASS
         }
     });
+    console.log(process.env.SENDER_EMAIL, process.env.SENDER_PASS)
     let mailDetails = {
         from: 'from pranav@Cryptosathi.com' + '<' + process.env.SENDER_EMAIL + '>',
         to: email,
@@ -17,14 +18,12 @@ const sendmail = (email,name) => {
     };
     mailTransporter.sendMail(mailDetails, function (err, data) {
         if (err) {
-            error='error';
             console.log('Error Occurs');
+            console.log(err);
         } else {
-            error='sent'
             console.log('Email sent successfully');
         }
     });
-    return error;
 }
 
 module.exports = {
