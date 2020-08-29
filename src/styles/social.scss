@@ -2,8 +2,7 @@
 
 .social{
     width: 100%;
-    margin-top: 6.2%;
-    background: #043361;
+    background:#1062b4;
     height: 15vh;
     h3{
        margin: 0;
@@ -110,7 +109,6 @@
   }
   @media screen and (max-width:786px){
     .social{
-        margin-top: 54%;
         height: 12vh;
         h3{
             font-size: 1rem;
@@ -126,10 +124,6 @@
         height: 2rem;
       }
   }
-  @media screen and (max-width:844px){
-    
-  } 
-
   @media screen and (max-width:488px){
       .social{
           height: 13vh;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import Particles from 'react-particles-js';
 import Out from './Out';
 import Social from '../Components/social';
 import Nomatch from '../Components/404';
@@ -9,18 +8,6 @@ import Dashboard from '../Components/MainApp/Dashboard';
 import 'tachyons';
 
 const backend_url = 'https://cryptosathi.herokuapp.com';
-
-const particles_options = {
-  particles: {
-    number: {
-      value: 140,
-      density: {
-        enable: true,
-        value_area: 1000
-      }
-    }
-  }
-}
 
 class App extends Component {
   constructor(props) {
@@ -72,7 +59,6 @@ class App extends Component {
     return (
       <Router>
         <div className='App'>
-          <Particles params={particles_options} className='particles' canvasClassName='canvas-p'/>
           <Switch>
             <Route exact path='/'>
               {this.state.signclick === 'loggedout' ? <Redirect to='/' /> : <Redirect to={'/dashboard/' + this.state.user.id} />}

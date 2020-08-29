@@ -8,11 +8,11 @@ function Nav1({login, register}) {
     }
     return(
         <>
-            <nav >
+            <nav>
                 <ul className='nav'>
                     <li className='navlogo'>CryptoSathi</li>
                     <li className='navp' onClick={login}>Log-In</li>
-                    <li className='navp' onClick={signup}>Register</li>
+                    <li className='navp navpl' onClick={signup}>Register</li>
                 </ul>
             </nav>
         </>

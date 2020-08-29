@@ -1,5 +1,4 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-
 .wrapper {
     width: 850px;
     height: 600px;
@@ -16,7 +15,7 @@
 }
 .login-text {
     width: 850px; 
-    background: linear-gradient(to left, #1a2744, #013464); 
+    background: linear-gradient(to left, #263961, #0c477e); 
     position: absolute;
     top: -300px;
     box-sizing: border-box;
@@ -108,7 +107,7 @@
 }
 
 .call-text {
-    background-color:#628caf;
+    background-color:#6f99bb;
     width: 850px; 
     height: 450px;
     position: absolute;
@@ -134,8 +133,8 @@
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        background: #162949 ; 
-        color: #90c2fc;
+        background: #2e5496 ; 
+        color: #a6c4e7;
         font-weight: bolder;
         margin-top: 30px;
         outline: none;
@@ -195,7 +194,7 @@ i {
         letter-spacing: 3px;
         font-size: 28px;
         font-family: cursive;
-        background: #0c2e55;
+        background: #1c3e6c;
     }
     .lh{
         left: 21px;
@@ -311,7 +310,7 @@ border-radius: 40% 40% 0 0 ;
     font-family: roman;
     margin-top: .25rem;
     background-color: #cabebe3b;
-    width: max-content;
+    width: 280px;
     margin-left: 4px;
   }
 
@@ -680,7 +679,7 @@ border-radius: 40% 40% 0 0 ;
              
         .input-feedback {
             margin-right: 0px;
-            width:160px;
+            max-width:160px;
           }
     } 
     .svl{
