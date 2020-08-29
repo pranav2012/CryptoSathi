@@ -33,8 +33,7 @@ const signuphandler = (req, res, db ,bcrypt) => {
                     from: 'Pranav from @gmail.com <himeshkumar48@gmail.com>', 
                     to: user[0].email, 
                     subject: 'Welcome, to CryptoSathi', 
-                    text: `Hey ${user[0].name}, Thanks for registering!`,
-                    html: '<h2>About CryptoSathi</h2></br><p>So, we are a company with great Repo in market you will be glad to join us , thanks for joining </p>'
+                    text: `Hey ${user[0].name}, Thanks for registering!`
                 }; 
 
                 mailTransporter.sendMail(mailDetails, function(err, data) { 
