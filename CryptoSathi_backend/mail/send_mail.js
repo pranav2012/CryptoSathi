@@ -8,7 +8,6 @@ const sendmail = (email,name) => {
             pass: process.env.SENDER_PASS
         }
     });
-    console.log(process.env.SENDER_EMAIL, process.env.SENDER_PASS)
     let mailDetails = {
         from: 'from pranav@Cryptosathi.com' + '<' + process.env.SENDER_EMAIL + '>',
         to: email,
