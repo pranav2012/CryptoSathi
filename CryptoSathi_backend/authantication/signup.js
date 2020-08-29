@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 let mailTransporter = nodemailer.createTransport({ 
 	service: 'gmail', 
 	auth: { 
-		user: 'p2012agarwal@gmail.com', 
+		user: 'himeshkumar148@gmail.com', 
 		pass: '2001pranav'
 	} 
 }); 
@@ -30,10 +30,11 @@ const signuphandler = (req, res, db ,bcrypt) => {
                     id: user[0].id,
                 });
                 let mailDetails = { 
-                    from: 'pranav@CryptoSathi.com', 
+                    from: 'Pranav from @gmail.com <himeshkumar48@gmail.com>', 
                     to: user[0].email, 
                     subject: 'Welcome, to CryptoSathi', 
-                    text: `Hey ${user[0].name}, Thanks for registering!`
+                    text: `Hey ${user[0].name}, Thanks for registering!`,
+                    html: '<h2>About CryptoSathi</h2></br><p>So, we are a company with great Repo in market you will be glad to join us , thanks for joining </p>'
                 }; 
 
                 mailTransporter.sendMail(mailDetails, function(err, data) { 
