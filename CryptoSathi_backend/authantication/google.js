@@ -1,5 +1,14 @@
 const send_mail = require('../mail/send_mail');
 
+
+const googleauth = (req, res, db, bcrypt) => {
+    let isuser = false;
+    db.select('email').from('users').where('email', '=', email)
+    .then(res => isuser = true).catch(err=> console.log('error found!'));
+    isuser?googleauthchecker(req, res, db, bcrypt):googleregister(req, res, db, bcrypt);
+}
+
+
 const googleregister = (req, res, db, bcrypt) => {
     const { name, email, username } = req.body;
     const hash = bcrypt.hashSync(email);
@@ -21,8 +30,7 @@ const googleregister = (req, res, db, bcrypt) => {
                         id: user[0].id,
                     });
                 }).catch(err => res.status(400).json('email error!'));
-        })
-        .catch(err => res.status(400).json('error'));
+        }).catch(err => res.status(400).json('error'));
 }
 
 const googleauthchecker = (req, res, db) => {
@@ -34,11 +42,9 @@ const googleauthchecker = (req, res, db) => {
                 username: user[0].name,
                 id: user[0].id,
             });
-        })
-        .catch(err => res.status(400).json('error'));
+        }).catch(err => res.status(400).json('error'));
 }
 
 module.exports = {
-    googleauthchecker,
-    googleregister
+    googleauth
 }

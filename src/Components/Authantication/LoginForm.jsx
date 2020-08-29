@@ -24,9 +24,9 @@ class Loginform extends Component {
         this.setState(prevState => ({ issignup: !prevState.issignup }));
     }
 
-    googleregister = (name,email) => {
+    googleauth = (name,email) => {
         let username = email.replace(/@[^@]+$/, '');
-        fetch(this.props.backend_url + '/gregister', {
+        fetch(this.props.backend_url + '/gauth', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -42,32 +42,11 @@ class Loginform extends Component {
                     this.props.signclick('home');
                 }
                 else{
-                    this.setState({greg: 1});
+                    this.setState({greg: 1,glog: 1});
                 }
             })
             .catch(err => console.log('error fetching token'))
         }
-
-    googlesignup = (email) => {
-        fetch(this.props.backend_url + '/gauth', {
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                email: email
-            })
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === 'sucess') {
-                    this.props.loaduser(data);
-                    this.props.signclick('home');
-                }
-                else {
-                    this.setState({ glog: 1 });
-                }
-            })
-            .catch(err => console.log('error fetching token'))
-    }
 
     frgtpass = () =>{
         this.loginslider();
@@ -94,7 +73,7 @@ class Loginform extends Component {
                                 <h3 className={`${this.state.issignup ? 'sh' : 'lh'}`}>OR</h3>
                             </div>
                             <div className={`show-hide ${this.state.issignup ? 'srightside' : 'rightside'}`}>
-                                {this.state.issignup ? <Soaths googleregister={this.googleregister}/> : <Oaths googlesignup={this.googlesignup}/>}
+                                {this.state.issignup ? <Soaths googleregister={this.googleauth}/> : <Oaths googlesignup={this.googleauth}/>}
                             </div>
                         </div>
                     </div>

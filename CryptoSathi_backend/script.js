@@ -14,16 +14,12 @@ app.use(bodyparser.json());
 
 app.use(cors());
 
-app.get('/', (req,res)=>{
-    res.send("hello cryptosathi's");
-});
+app.get('/', (req,res) => res.send("hello cryptosathi's"));
 
 app.post('/login', (req,res) => {login.loginhandler(req,res,db,bcrypt)})
 
 app.post('/register', (req,res)=>{signup.signuphandler(req,res,db,bcrypt)});
 
-app.post('/gauth', (req,res) => {google.googleauthchecker(req,res,db,bcrypt)});
-
-app.post('/gregister', (req,res) => {google.googleregister(req,res,db,bcrypt)});
+app.post('/gauth', (req,res) => {google.googleauth(req,res,db,bcrypt)});
 
 app.listen(port, () => console.log(`running on port ${port}`));
