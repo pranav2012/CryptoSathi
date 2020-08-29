@@ -21,7 +21,7 @@ const signuphandler = (req, res, db ,bcrypt) => {
                     username: user[0].name,
                     id: user[0].id,
                 });
-            }).catch(err=> res.status(400).json('no such user'));
+            }).catch(err=> res.status(400).json('email error!'));
         }).catch(err => res.status(400).json('error'));
 }
 
