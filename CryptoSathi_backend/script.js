@@ -7,7 +7,6 @@ const login = require('./authantication/login');
 const signup = require('./authantication/signup');
 const google = require('./authantication/google');
 const bcrypt = require('bcrypt-nodejs');
-const send_mail = require('./mail/send_mail');
 
 const app = express();
 
