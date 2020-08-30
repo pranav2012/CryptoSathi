@@ -2,15 +2,15 @@
 
 .social{
     width: 100%;
-    background:#1062b4;
+    background:#cbe1f5;
     height: 15vh;
     h3{
        margin: 0;
        padding-top: 10px;
        padding-left: 10px;
-       color: #90c2fc;
+       color: #2a2f30;
        text-decoration: underline;
-       font-size: 1.2rem;
+       font-size: 1.3rem;
        font-family: 'ubuntu';
        letter-spacing: 2px;
     }
@@ -128,7 +128,7 @@
       .social{
           height: 13vh;
           h3{
-              font-size: 1rem;
+              font-size: 1.1rem;
           }
       }
       .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram .fa-github{

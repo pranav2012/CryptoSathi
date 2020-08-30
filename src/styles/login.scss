@@ -15,7 +15,7 @@
 }
 .login-text {
     width: 850px; 
-    background: linear-gradient(to left, #263961, #0c477e); 
+    background: linear-gradient(to left, #4367b3, #156dc0); 
     position: absolute;
     top: -300px;
     box-sizing: border-box;
@@ -95,8 +95,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #8eafd6;
-    border: 2px solid #fff;
+    background: #ebeff5;
+    border: 3px solid rgb(71, 165, 243);
     position: absolute;
     bottom: -30px;
     left: 390px;
@@ -107,7 +107,7 @@
 }
 
 .call-text {
-    background-color:#6f99bb;
+    background-color:#95c6ee;
     width: 850px; 
     height: 450px;
     position: absolute;
@@ -119,10 +119,10 @@
     h1 {
         font-size: 1.8rem;
         margin-top: 10%;
-        color: #0b2f58;
+        color: #0b3b72;
 
         span {
-            color: #8fc2fe;
+            color: #008cff;
             font-weight: bolder;    
         }
     }
@@ -133,8 +133,8 @@
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        background: #2e5496 ; 
-        color: #a6c4e7;
+        background: #3b75d8 ; 
+        color: #ffffff;
         font-weight: bolder;
         margin-top: 30px;
         outline: none;
@@ -194,7 +194,7 @@ i {
         letter-spacing: 3px;
         font-size: 28px;
         font-family: cursive;
-        background: #1c3e6c;
+        background: #3169b8;
     }
     .lh{
         left: 21px;
@@ -347,10 +347,7 @@ border-radius: 40% 40% 0 0 ;
         h1 {
             font-size: 1.3rem;
             margin-top: 18%;
-            color: #696a86;
-    
             span {
-                color: #333;
                 font-weight: bolder;    
             }
         }
@@ -537,11 +534,9 @@ border-radius: 40% 40% 0 0 ;
         h1 {
             font-size: 0.8rem;
             margin-top: 43%;
-            color: #696a86;
             margin-right: 20%;
     
             span {
-                color: #333;
                 font-weight: bolder;    
             }
         }
@@ -704,6 +699,7 @@ border-radius: 40% 40% 0 0 ;
           .input-feedback {
             font-size: 8px;
             margin-top: 2px;
+            width:145px;
             margin-left: 4px;
           }       
 } 

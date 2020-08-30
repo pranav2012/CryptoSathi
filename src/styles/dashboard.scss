@@ -1,5 +1,5 @@
 .dashboard {
-    height: 60vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +12,7 @@
 
 @media screen and (max-width:488px){
     .dashboard{
+        height: 80vh;
         p{
             font-size: 1rem;
         }
