@@ -1,16 +1,19 @@
 const send_mail = require('../mail/send_mail');
 
-const googleauth = (req, res, db, bcrypt) => {
+async function googleauth(req, res, db, bcrypt) {
     let isuser = false;
-    db.select('email').from('users').where('email', '=', req.body.email)
-    .then(res =>{ isuser = true; console.log('found!')}).catch(err=> console.log('no user found!' + isuser));
-    setTimeout(()=>isuser?googleauthchecker(req, res, db, bcrypt):googleregister(req, res, db, bcrypt),150);
+    const a = await db.select('email').from('users').where('email', '=', req.body.email);
+    if(a.length > 0){
+        isuser = true;
+    }
+    isuser?googleauthchecker(req, res, db, bcrypt):googleregister(req, res, db, bcrypt);
 }
 
 
 const googleregister = (req, res, db, bcrypt) => {
     const { name, email, username } = req.body;
     const hash = bcrypt.hashSync(email);
+    console.log('reg')
     db('users')
         .returning('*')
         .insert({
@@ -34,6 +37,7 @@ const googleregister = (req, res, db, bcrypt) => {
 
 const googleauthchecker = (req, res, db) => {
     const { email } = req.body;
+    console.log('login')
     db.select('id', 'email', 'name').from('users').where('email', '=', email)
         .then(user => {
             res.json({
