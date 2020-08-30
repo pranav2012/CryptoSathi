@@ -1,10 +1,9 @@
 const send_mail = require('../mail/send_mail');
 
-let isuser = false;
-
 const googleauth = (req, res, db, bcrypt) => {
+    let isuser = false;
     db.select('email').from('users').where('email', '=', req.body.email)
-    .then(res => isuser = true).catch(err=> console.log('no user found!' + isuser));
+    .then(res =>{ isuser = true; console.log('found!')}).catch(err=> console.log('no user found!' + isuser));
     setTimeout(()=>isuser?googleauthchecker(req, res, db, bcrypt):googleregister(req, res, db, bcrypt),150);
 }
 
