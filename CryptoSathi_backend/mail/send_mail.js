@@ -9,7 +9,7 @@ const sendmail = (email,name) => {
         }
     });
     let mailDetails = {
-        from: `'from pranav@Cryptosathi.com' <${process.env.SENDER_EMAIL}>`,
+        from: `'pranav@cryptosathi.com' <${process.env.SENDER_EMAIL}>`,
         to: email,
         subject: 'Welcome, to CryptoSathi',
         text: `Hey ${name}, Thanks for registering!`,
