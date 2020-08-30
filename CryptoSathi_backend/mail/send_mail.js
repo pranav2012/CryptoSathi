@@ -9,10 +9,10 @@ const sendmail = (email,name) => {
         }
     });
     let mailDetails = {
-        from: 'from pranav@Cryptosathi.com' + '<' + process.env.SENDER_EMAIL + '>',
+        from: `'from pranav@Cryptosathi.com' <${process.env.SENDER_EMAIL}>`,
         to: email,
         subject: 'Welcome, to CryptoSathi',
-        text: `Hey ${name}, Thanks for registering!`
+        text: `Hey ${name}, Thanks for registering!`,
     };
     mailTransporter.sendMail(mailDetails, function (err, data) {
         if (err) {
