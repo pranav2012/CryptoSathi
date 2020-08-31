@@ -1,6 +1,7 @@
 # CryptoSathi 
 
 #### [Check Live Website](https://master.dvu1bmxdyq72t.amplifyapp.com)
+![](https://raw.githubusercontent.com/pranav2012/CryptoSathi/master/MainPage.png)
 
 ## Features
 * with Google Oauth 
