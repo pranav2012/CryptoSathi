@@ -5,7 +5,8 @@ function Preloader() {
   return (
     <React.Fragment>
       <Lines
-       time={1500} 
+      time={800}
+      customLoading={false}
        />
     </React.Fragment>
   );
