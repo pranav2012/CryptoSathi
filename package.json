@@ -13,6 +13,7 @@
     "react-dom": "^16.13.1",
     "react-google-login": "^5.1.21",
     "react-particles-js": "^3.2.1",
+    "react-preloaders": "^3.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
     "react-tilt": "^0.1.4",
