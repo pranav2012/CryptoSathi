@@ -6,7 +6,7 @@ async function googleauth(req, res, db, bcrypt) {
     if(a.length > 0){
         isuser = true;
     }
-    isuser?googleauthchecker(req, res, db, bcrypt):googleregister(req, res, db, bcrypt);
+    isuser?googleauthchecker(req, res, db):googleregister(req, res, db, bcrypt);
 }
 
 
